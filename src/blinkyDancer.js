@@ -12,9 +12,8 @@ makeBlinkyDancer.prototype.step = function() {
     //console.log("hi");
     //oldStep();
     makeDancer.prototype.step.call(this);
-    if(this.$node !== undefined){
+
     this.$node.toggle();
-}
   };
 
   
