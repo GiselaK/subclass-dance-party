@@ -7,14 +7,13 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.step();
   this.setPosition(top, left);
   this.time = timeBetweenSteps;
-  //this.initialize();
 };
 
 makeDancer.prototype.step = function() {
-    setTimeout(this.step, this.time);
+    setTimeout(this.step.bind(this), this.time);
     
   };
-makeDancer.prototype.step();
+
 
 
  makeDancer.prototype.setPosition = function(top, left) {
