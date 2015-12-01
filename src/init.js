@@ -36,7 +36,8 @@ $(document).ready(function() {
       //console.log(dancer.left);
     });
   });
-/* $(".lineup").on("click", function(event) { //Lining up the nodes for now.
+
+$(".lineup").on("click", function(event) { //Lining up the nodes for now.
    
     for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].lineUp();
@@ -44,17 +45,17 @@ $(document).ready(function() {
       //window.dancers[i].top = $("body").height() * Math.random();
       //console.log("top: "+window.dancers[i].top);
     }
-  // });
-/*$(".makeDancersLineUp").on("click", function(event) {
+  });
 
+/*
     var dancer = new makeDancer(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancer.$colorNode);
-  });
-*/
+    $('body').append(dancer.$taco);
+  });*/
+
 
   var checkPartner = function(){
     for(var i = 0; i < window.dancers.length; i++){
