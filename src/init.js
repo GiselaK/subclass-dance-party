@@ -29,17 +29,24 @@ $(document).ready(function() {
     );
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
+
+    $(".dancer").mouseover(function()
+    {
+      //$(this).addClass('colorDance');
+      $(this).css({top: 10});
+      //console.log(dancer.left);
+    });
   });
-$(".addColorDancerButton").on("click", function(event) { //Lining up the nodes for now.
+$(".lineup").on("click", function(event) { //Lining up the nodes for now.
    
     for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].lineUp();
       window.dancers[i].left = 10;
       //window.dancers[i].top = $("body").height() * Math.random();
-      console.log("top: "+window.dancers[i].top);
+      //console.log("top: "+window.dancers[i].top);
     }
   });
-$(".makeDancersLineUp").on("click", function(event) {
+/*$(".makeDancersLineUp").on("click", function(event) {
 
     var dancer = new makeDancer(
       $("body").height() * Math.random(),
@@ -48,7 +55,7 @@ $(".makeDancersLineUp").on("click", function(event) {
     );
     $('body').append(dancer.$colorNode);
   });
-  
+  */
   var checkPartner = function(){
     for(var i = 0; i < window.dancers.length; i++){
       for(var j = 0; j < window.dancers.length; j++){
@@ -68,7 +75,7 @@ $(".makeDancersLineUp").on("click", function(event) {
   
   };
 
-
+  
   setInterval(checkPartner, 1000);
   
 });

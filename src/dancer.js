@@ -34,6 +34,10 @@ makeDancer.prototype.lineUp = function (){
 
 }
 
+makeDancer.prototype.jump = function (){
+  this.$node.css({top: 10})
+}
+
 /*makeDancer.prototype.interact = function(){
   var x = this.$node.css(left);
   var y = this.$node.css(top);
