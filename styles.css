@@ -23,9 +23,9 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer {
-  background-image: url(https://media.giphy.com/media/RKZjNekwcBk0o/giphy.gif);*/
+  /*background-image: url(https://media.giphy.com/media/RKZjNekwcBk0o/giphy.gif);*/
   /*background-color: red;*/
-  border:10px solid red;
+ /* border:10px solid red;*/
   /*border-radius:10px;*/
   width: 100px;
   height: 65px;
@@ -34,7 +34,7 @@ body, a:link, a:visited, a:active{
   /*color: green;*/
 }
 .colorDance{
-  background-image: url(https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif);
+  background-image: url(https://media.giphy.com/media/RKZjNekwcBk0o/giphy.gif);;
   /*background-image: url(https://media.giphy.com/media/RKZjNekwcBk0o/giphy.gif);*/
   /*opacity: 0px;*/
   width: 100px;
