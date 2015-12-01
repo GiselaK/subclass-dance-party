@@ -22,14 +22,16 @@ makeDancer.prototype.step = function() {
       top: top,
       left: left
     };
-
+    this.top = top;
+    this.left = left;
     this.$node.css(styleSettings);
     this.$colorNode.css(styleSettings);
   };
 
 
 makeDancer.prototype.lineUp = function (){
-  this.$node.css({left: 10});
+  this.$node.css({left: 10, top: $("body").height() * Math.random()});
+
 }
 
 /*makeDancer.prototype.interact = function(){

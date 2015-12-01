@@ -35,8 +35,8 @@ $(".addColorDancerButton").on("click", function(event) { //Lining up the nodes f
     for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].lineUp();
       window.dancers[i].left = 10;
-      window.dancers[i].top = $("body").height() * Math.random();
-      // console.log(window.dancers[i].left);
+      //window.dancers[i].top = $("body").height() * Math.random();
+      console.log("top: "+window.dancers[i].top);
     }
   });
 $(".makeDancersLineUp").on("click", function(event) {
@@ -56,7 +56,7 @@ $(".makeDancersLineUp").on("click", function(event) {
         var topDistance = Math.abs(window.dancers[i].top - window.dancers[j].top);
         var square = Math.pow(leftDistance, 2) + Math.pow(topDistance, 2);
         var distance = Math.sqrt(square);
-        //console.log(distance);
+        // console.log("distance: "+distance);
         //console.log("leftDistance: "+leftDistance)
         //console.log("topDistance: "+ topDistance);
         if(distance > 0 && distance < 100){
