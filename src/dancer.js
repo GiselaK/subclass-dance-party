@@ -4,7 +4,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
   this.$node = $('<span class="dancer"></span>');
   this.$colorNode = $('<span class="colorDance"></span>') ; 
-  
+  this.neighbors = [];
   this.step();
   this.setPosition(top, left);
   this.time = timeBetweenSteps;
@@ -31,3 +31,9 @@ makeDancer.prototype.step = function() {
 makeDancer.prototype.lineUp = function (){
   this.$node.css({left: 10});
 }
+
+/*makeDancer.prototype.interact = function(){
+  var x = this.$node.css(left);
+  var y = this.$node.css(top);
+  return Math.sqrt(x*x + y*y);
+};*/
