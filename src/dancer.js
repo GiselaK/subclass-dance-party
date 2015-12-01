@@ -3,8 +3,8 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
 
   this.$node = $('<span class="dancer"></span>');
-  this.$colorNode = $('<span class="colorDance"></span>') ; 
-  this.neighbors = [];
+  //this.$colorNode = $('<span class="colorDance"></span>') ; 
+  //this.neighbors = [];
   this.step();
   this.setPosition(top, left);
   this.time = timeBetweenSteps;
@@ -25,7 +25,7 @@ makeDancer.prototype.step = function() {
     this.top = top;
     this.left = left;
     this.$node.css(styleSettings);
-    this.$colorNode.css(styleSettings);
+    //this.$colorNode.css(styleSettings);
   };
 
 
@@ -34,12 +34,4 @@ makeDancer.prototype.lineUp = function (){
 
 }
 
-makeDancer.prototype.jump = function (){
-  this.$node.css({top: 10})
-}
 
-/*makeDancer.prototype.interact = function(){
-  var x = this.$node.css(left);
-  var y = this.$node.css(top);
-  return Math.sqrt(x*x + y*y);
-};*/
