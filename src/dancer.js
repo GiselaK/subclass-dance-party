@@ -29,9 +29,12 @@ makeDancer.prototype.step = function() {
   };
 
 
-makeDancer.prototype.lineUp = function (){
+makeDancer.prototype.lineUpLeft = function (){
   this.$node.css({left: 10, top: $("body").height() * Math.random()});
 
 }
 
+makeDancer.prototype.lineUpRight = function (){
+  this.$node.css({left: $("body").width() - 100, top: $("body").height() * Math.random()});
+}
 

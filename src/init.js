@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  // window.dancerArrays = [];
   $(".addDancerButton").on("click", function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -27,6 +28,19 @@ $(document).ready(function() {
       Math.random() * 1000
       );
     window.dancers.push(dancer);
+
+
+    // if first type of dancer
+    // if(!window[dancerMakerFunctionName + "Array"])
+    //   // make a new array for that dancer on the global scope and push into array
+    //   window[dancerMakerFunctionName + "Array"] = [];
+    // // if not first type of dancer
+    // else {
+
+    //   // push dancer to dancerType array
+    // }
+
+    console.log(dancer.class)
     $('body').append(dancer.$node);
 
     $(".dancer").mouseover(function()
@@ -35,13 +49,22 @@ $(document).ready(function() {
       $(this).css({top: 10});
       //console.log(dancer.left);
     });
+    
+    $( ".dancer" ).draggable();
   });
 
 $(".lineup").on("click", function(event) { //Lining up the nodes for now.
    
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].lineUp();
-      window.dancers[i].left = 10;
+      
+      if(window.dancers[i].$node[0].className === "dancer taco"){
+        window.dancers[i].lineUpRight();
+        window.dancers[i].left = $("body").width()-10;
+      }
+      else {
+        window.dancers[i].lineUpLeft();
+        window.dancers[i].left = 10;
+      }
       //window.dancers[i].top = $("body").height() * Math.random();
       //console.log("top: "+window.dancers[i].top);
     }
