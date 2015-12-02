@@ -28,7 +28,7 @@ $(document).ready(function() {
       Math.random() * 1000
       );
     window.dancers.push(dancer);
-
+    
 
     // if first type of dancer
     // if(!window[dancerMakerFunctionName + "Array"])
@@ -42,22 +42,21 @@ $(document).ready(function() {
 
     console.log(dancer.class)
     $('body').append(dancer.$node);
-
-    $(".dancer").mouseover(function()
+    $( ".dancer" ).draggable();
+    /*$(".dancer").mouseover(function()
     {
       //$(this).addClass('colorDance');
       $(this).css({top: 10});
       //console.log(dancer.left);
-    });
+    });*/
     
-    $( ".dancer" ).draggable();
   });
 
 $(".lineup").on("click", function(event) { //Lining up the nodes for now.
    
     for (var i = 0; i < window.dancers.length; i++) {
       
-      if(window.dancers[i].$node[0].className === "dancer taco"){
+      if(window.dancers[i].$node[0].className.includes("taco")){
         window.dancers[i].lineUpRight();
         window.dancers[i].left = $("body").width()-10;
       }
