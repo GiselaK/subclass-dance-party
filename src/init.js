@@ -86,9 +86,12 @@ $(".lineup").on("click", function(event) { //Lining up the nodes for now.
         var topDistance = Math.abs(window.dancers[i].top - window.dancers[j].top);
         var square = Math.pow(leftDistance, 2) + Math.pow(topDistance, 2);
         var distance = Math.sqrt(square);
-        if(distance > 0 && distance < 100){
-
+        if(distance > 0 && distance < 90){
+          //console.log("Collision");
+          window.dancers[j].$node.toggle();
+          //window.dancers[i].$node.toggle();
         }
+        
       }
     }
 
