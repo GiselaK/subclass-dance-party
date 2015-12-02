@@ -46,7 +46,10 @@ body, a:link, a:visited, a:active{
 .taco{
   background-image: url(https://media.giphy.com/media/8K1IYSnhUaNH2/giphy.gif);
   width: 100px;
-  height: 65px;
+  height: 60px;
   position:absolute;
   background-size: 100px;
+}
+.eat {
+  height: 30px;
 }

@@ -87,21 +87,31 @@ $(".lineup").on("click", function(event) { //Lining up the nodes for now.
         var square = Math.pow(leftDistance, 2) + Math.pow(topDistance, 2);
         var distance = Math.sqrt(square);
         if(distance > 0 && distance < 90){
-          window.dancers[j].$node.toggle();
+          // window.dancers[j].$node.toggle();
           //console.log("Collision");
           if(window.dancers[i].$node[0].className.includes("colorDance") && window.dancers[j].$node[0].className.includes("colorDance")){
             
             //debugger;
-            window.dancers[j].setPosition(window.dancers[j].top, window.dancers[j].left + 20);
+            window.dancers[j].setPosition(window.dancers[j].top, window.dancers[j].left + 10);
             //window.dancers[i].setPosition(window.dancers[i].top, window.dancers[i].left - 20);
-            window.dancers[j].left+=20;
+            window.dancers[j].left+=10;
             //window.dancers[i].left-=20;
 
           }
-            
+          if(window.dancers[i].$node[0].className.includes("colorDance") && window.dancers[j].$node[0].className.includes("taco")){ 
+            window.dancers[j].eat();
             // window.dancers[i].$node.toggle();
             // window.dancers[i].left+=1;
             // window.dancers[i].left+=1;
+
+          }
+          if(window.dancers[j].$node[0].className.includes("colorDance") && window.dancers[i].$node[0].className.includes("taco")){ 
+            window.dancers[i].eat();
+            // window.dancers[i].$node.toggle();
+            // window.dancers[i].left+=1;
+            // window.dancers[i].left+=1;
+
+          }
         }
         
       }
