@@ -25,6 +25,7 @@ makeDancer.prototype.step = function() {
     this.top = top;
     this.left = left;
     this.$node.css(styleSettings);
+    console.log("inside set position");
     //this.$colorNode.css(styleSettings);
   };
 
